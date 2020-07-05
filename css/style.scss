@@ -1,0 +1,34 @@
+$primary:#383838;
+$secondary: green;
+$third: white;
+$fourth: #CCC;
+$nav-back: #1f1f1f;
+
+body {
+    display: flex;
+    flex-flow: row, nowrap;
+}
+
+nav {
+    min-height: 1000px;
+    min-width: 90px;
+    width: 5%;
+    background-color: $nav-back;
+     
+}
+
+main {
+    min-height: 600px;
+    width: 50%;
+    background-color: $primary
+}
+
+aside {
+    min-height: 600px;
+    width: 45%;
+    background-color: $primary
+}
+
+img {
+    padding: 20px;
+}

@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  flex-flow: row, nowrap;
+}
+
+nav {
+  min-height: 1000px;
+  min-width: 90px;
+  width: 5%;
+  background-color: #1f1f1f;
+}
+
+main {
+  min-height: 600px;
+  width: 50%;
+  background-color: #383838;
+}
+
+aside {
+  min-height: 600px;
+  width: 45%;
+  background-color: #383838;
+}
+
+img {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

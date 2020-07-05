@@ -1,0 +1,19 @@
+{
+  "name": "joshua-portfolio",
+  "version": "1.0.0",
+  "description": "OpenClassrooms Project 3 ",
+  "main": "index.js",
+  "scripts": {
+        "sass": "sass --watch ./css/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deathbycheeto/Resume-Portfolio.git"
+  },
+  "author": "Joshua Frazier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deathbycheeto/Resume-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Deathbycheeto/Resume-Portfolio#readme"
+}
