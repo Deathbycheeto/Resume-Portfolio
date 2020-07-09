@@ -1,6 +1,6 @@
-$primary:#383838;
-$secondary: green;
-$third: white;
+$primary:#2b2a2a;
+$secondary: springgreen;
+$third: teal;
 $fourth: #CCC;
 $nav-back: #1f1f1f;
 
@@ -20,7 +20,42 @@ nav {
 main {
     min-height: 600px;
     width: 50%;
-    background-color: $primary
+    background-color: $primary;
+    h1 {
+        font-size: 4em;
+        color: $secondary;
+        position: relative;
+        top: 20%;
+        left: 15%;
+        max-width: 600px;
+    }
+    h3 {
+        font-size: 2em;
+        color: $third;
+        position: relative;
+        top: 20%;
+        left: 15%;
+        max-width: 600px;
+    }
+    hr {
+        font-size: 2em;
+        color: $third;
+        position: relative;
+        top: 20%;
+        left: 15%;
+    }
+    ul {
+        font-size: 2em;
+        color: $secondary;
+        position: relative;
+        top: 20%;
+        left: 15%;
+        max-width: 600px;
+        li {
+            list-style: none;
+        }
+
+    }
 }
 
 aside {
@@ -33,7 +68,7 @@ img {
     padding: 20px;
 }
 
-#Nav-Container { 
+#nav-container { 
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,0 +1,18 @@
+Phase 1:  Designing of all the page withh CSS
+    Homepage - due 7/09
+    About Page - due 7/09
+    Resume skill - due 7/09 
+    Portfolio page - due 7/09
+    Contact page - due 7/09
+Phase 2:  Make the website responsive
+    Homepage - 
+    About Page -
+    Resume skill - 
+    Portfolio page -
+    Contact page -
+Phase 3:  implement animation in all pages
+    Homepage - 
+    About Page -
+    Resume skill - 
+    Portfolio page -
+    Contact page -
