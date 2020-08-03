@@ -5,6 +5,7 @@ $fourth: #CCC;
 $nav-back: #1f1f1f;
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-flow: row, nowrap;
 }
@@ -14,12 +15,13 @@ nav {
     min-width: 90px;
     width: 5%;
     background-color: $nav-back;
+    
      
 }
 
 main {
     min-height: 600px;
-    width: 50%;
+    width: 70%;
     background-color: $primary;
     h1 {
         font-size: 4em;
@@ -27,7 +29,7 @@ main {
         position: relative;
         top: 20%;
         left: 15%;
-        max-width: 600px;
+        max-width: 600px;        
     }
     h3 {
         font-size: 2em;
@@ -41,6 +43,7 @@ main {
         font-size: 2em;
         color: $third;
         position: relative;
+        padding-right:3000px;
         top: 20%;
         left: 15%;
     }
@@ -75,4 +78,61 @@ img {
     position: absolute;
     top:200px;
     width: 90px
+}
+
+#intro_name {
+    animation: intro_name;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes intro_name {
+    0%      {top: -200px;}
+    100%    {top: 20%;}
+}
+
+#intro_desc {
+    animation: intro_desc;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes intro_desc {
+    0%      {top: 120%;}
+    100%    {top: 20%;}
+}
+
+#hr_index {
+    animation: intro_hr;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes intro_hr {
+    0%      {left: 120%;}
+    100%    {left: 15%;}
+}
+
+.change_text:hover {
+    text-decoration: underline;
+    animation: change_text;
+    animation-duration: 2s;
+}
+
+@keyframes change_text {
+    0%      {color: $third;}
+    100%    {color: $secondary;}
+}
+
+.change_header:hover {
+    animation: change_header;
+    animation-duration: 1.5s;
+}
+
+@keyframes change_header {
+    0%      {color: $secondary;}
+    100%    {color: $third;}
 }
