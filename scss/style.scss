@@ -1,8 +1,10 @@
-$primary:#2b2a2a;
-$secondary: springgreen;
-$third: teal;
-$fourth: #CCC;
-$nav-back: #1f1f1f;
+@use "./variables" as var;
+
+@mixin mainPosition {
+    position: relative;
+    top: 20%;
+    left: 15%;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -11,10 +13,10 @@ body {
 }
 
 nav {
-    min-height: 1000px;
+    min-height: 100vh;
     min-width: 90px;
     width: 5%;
-    background-color: $nav-back;
+    background-color: var.$nav-back;
     
      
 }
@@ -22,37 +24,29 @@ nav {
 main {
     min-height: 600px;
     width: 70%;
-    background-color: $primary;
+    background-color: var.$primary;
     h1 {
         font-size: 4em;
-        color: $secondary;
-        position: relative;
-        top: 20%;
-        left: 15%;
-        max-width: 600px;        
+        color: var.$secondary;
+        @include mainPosition();
+        max-width: 600px;
+
     }
     h3 {
         font-size: 2em;
-        color: $third;
-        position: relative;
-        top: 20%;
-        left: 15%;
+        color: var.$third;
+        @include mainPosition();
         max-width: 600px;
     }
     hr {
         font-size: 2em;
-        color: $third;
-        position: relative;
-        padding-right:3000px;
-        top: 20%;
-        left: 15%;
+        color: var.$third;
+        @include mainPosition();
     }
     ul {
         font-size: 2em;
-        color: $secondary;
-        position: relative;
-        top: 20%;
-        left: 15%;
+        color: var.$secondary;
+        @include mainPosition();
         max-width: 600px;
         li {
             list-style: none;
@@ -64,7 +58,7 @@ main {
 aside {
     min-height: 600px;
     width: 45%;
-    background-color: $primary
+    background-color: var.$primary
 }
 
 img {
@@ -123,8 +117,8 @@ img {
 }
 
 @keyframes change_text {
-    0%      {color: $third;}
-    100%    {color: $secondary;}
+    0%      {color: var.$third;}
+    100%    {color: var.$secondary;}
 }
 
 .change_header:hover {
@@ -133,6 +127,6 @@ img {
 }
 
 @keyframes change_header {
-    0%      {color: $secondary;}
-    100%    {color: $third;}
+    0%      {color: var.$secondary;}
+    100%    {color: var.$third;}
 }

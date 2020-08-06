@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-  min-height: 1000px;
+  min-height: 100vh;
   min-width: 90px;
   width: 5%;
   background-color: #1f1f1f;
@@ -36,7 +36,6 @@ main hr {
   font-size: 2em;
   color: teal;
   position: relative;
-  padding-right: 3000px;
   top: 20%;
   left: 15%;
 }
