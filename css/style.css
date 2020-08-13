@@ -1,3 +1,35 @@
+@keyframes change_text {
+  0% {
+    color: teal;
+  }
+  100% {
+    color: springgreen;
+  }
+}
+@keyframes hr_anim {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: 15%;
+  }
+}
+@keyframes h1_anim {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes h3_anim {
+  0% {
+    top: 105vh;
+  }
+  100% {
+    top: 10%;
+  }
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -26,6 +58,14 @@ main h1 {
   color: springgreen;
   font-size: 4em;
   margin: 0px;
+  animation: h1_anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+main h1:hover {
+  transition: color 1s ease-in;
+  color: teal;
 }
 main h3 {
   color: teal;
@@ -35,6 +75,15 @@ main h3 {
   font-size: 2em;
   max-width: 800px;
   color: teal;
+  animation: h3_anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+main h3 span:hover {
+  transition: color 1s ease-in;
+  color: springgreen;
+  text-decoration: underline;
 }
 main hr {
   color: teal;
@@ -46,6 +95,10 @@ main hr {
   max-width: 800px;
   color: teal;
   width: 50%;
+  animation: hr_anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
 main ul {
   color: springgreen;
@@ -73,9 +126,11 @@ main ul li {
 
 .social-media {
   display: inline-block;
-  margin: 50px;
-  width: 100px;
-  height: 100px;
+  padding: 0px;
+  margin: 25px;
+  width: 115px;
+  height: 120px;
+  border: 5px solid white;
 }
 
 .nav-button {
@@ -108,79 +163,6 @@ img {
   position: absolute;
   top: 200px;
   width: 90px;
-}
-
-#intro_name {
-  animation: intro_name;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-}
-
-@keyframes intro_name {
-  0% {
-    top: -200px;
-  }
-  100% {
-    top: 10%;
-  }
-}
-#intro_desc {
-  animation: intro_desc;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes intro_desc {
-  0% {
-    top: 120%;
-  }
-  100% {
-    top: 10%;
-  }
-}
-#hr_index {
-  animation: intro_hr;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-}
-
-@keyframes intro_hr {
-  0% {
-    left: 120%;
-  }
-  100% {
-    left: 15%;
-  }
-}
-.change_text:hover {
-  text-decoration: underline;
-  animation: change_text;
-  animation-duration: 2s;
-}
-
-@keyframes change_text {
-  0% {
-    color: teal;
-  }
-  100% {
-    color: springgreen;
-  }
-}
-.change_header:hover {
-  animation: change_header;
-  animation-duration: 1.5s;
-}
-
-@keyframes change_header {
-  0% {
-    color: springgreen;
-  }
-  100% {
-    color: teal;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

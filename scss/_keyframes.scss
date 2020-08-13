@@ -1,0 +1,21 @@
+@use "./variables" as var;
+
+@keyframes change_text {
+    0%      {color: var.$third;}
+    100%    {color: var.$secondary;}
+}
+
+@keyframes hr_anim {
+    0%      {left: 150%;}
+    100%    {left: 15%;}
+}
+
+@keyframes h1_anim {
+    0%      {top: -200px;}
+    100%    {top: 10%;}
+}
+
+@keyframes h3_anim {
+    0%      {top: 105vh;}
+    100%    {top: 10%;}
+}

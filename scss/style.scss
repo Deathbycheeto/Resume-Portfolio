@@ -1,13 +1,15 @@
 @use "./variables" as var;
+@use "./mixins" as mix;
+@use "./keyframes" as key;
 
-@mixin mainStyle ($color) {
-    position: relative;
-    top: 10%;
-    left: 15%;
-    font-size: 2em;
-    max-width: 800px;
-    color: $color;
-}
+// @mixin mainStyle ($color) {
+//     position: relative;
+//     top: 10%;
+//     left: 15%;
+//     font-size: 2em;
+//     max-width: 800px;
+//     color: $color;
+// }
 
 
 body {
@@ -29,23 +31,43 @@ main {
     background-color: var.$primary;
     h1 {
         color: var.$secondary;
-        @include mainStyle(var.$secondary);
+        @include mix.mainStyle(var.$secondary);
         font-size: 4em;
         margin: 0px;
+        animation: h1_anim;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        &:hover {
+            @include mix.colorChange(true);
+        }
     }
     h3 {        
         color: var.$third;
-        @include mainStyle(var.$third);
+        @include mix.mainStyle(var.$third);
+        animation: h3_anim;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        span {
+            &:hover {
+                @include mix.colorChange(false);
+            }
+        }
     }
     hr {
         color: var.$third;
         float: left;
-        @include mainStyle(var.$third);
+        @include mix.mainStyle(var.$third);
         width: 50%;
+        animation: hr_anim;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
     }
     ul {
         color: var.$secondary;
-        @include mainStyle(var.$secondary);
+        @include mix.mainStyle(var.$secondary);
         li {
             list-style: none;
         }
@@ -53,18 +75,19 @@ main {
     }
 }
 
-.social-container{
-    @include mainStyle(var.$fourth);
+.social-container {
+    @include mix.mainStyle(var.$fourth);
     font-size: 1em;
     border: 1px solid white;
 }
 
-.social-media{
+.social-media {
     display: inline-block;
-    margin: 50px;
-    width: 100px;
-    height: 100px;
-    
+    padding: 0px;
+    margin: 25px;
+    width: 115px;
+    height: 120px;
+    border: 5px solid white;
 }
 
 .nav-button {
@@ -99,60 +122,60 @@ img {
     width: 90px;
 }
 
-#intro_name {
-    animation: intro_name;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-}
+// #intro_name {
+//     animation: intro_name;
+//     animation-duration: 1s;
+//     animation-fill-mode: forwards;
+//     animation-timing-function: ease-in;
+// }
 
-@keyframes intro_name {
-    0%      {top: -200px;}
-    100%    {top: 10%;}
-}
+// @keyframes intro_name {
+//     0%      {top: -200px;}
+//     100%    {top: 10%;}
+// }
 
-#intro_desc {
-    animation: intro_desc;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
+// #intro_desc {
+//     animation: intro_desc;
+//     animation-duration: 1s;
+//     animation-fill-mode: forwards;
+//     animation-timing-function: ease-in-out;
+// }
 
-@keyframes intro_desc {
-    0%      {top: 120%;}
-    100%    {top: 10%;}
-}
+// @keyframes intro_desc {
+//     0%      {top: 120%;}
+//     100%    {top: 10%;}
+// }
 
-#hr_index {
-    animation: intro_hr;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-}
+// #hr_index {
+//     animation: intro_hr;
+//     animation-duration: 1s;
+//     animation-fill-mode: forwards;
+//     animation-timing-function: ease-in;
+// }
 
-@keyframes intro_hr {
-    0%      {left: 120%;}
-    100%    {left: 15%;}
-}
+// @keyframes intro_hr {
+//     0%      {left: 120%;}
+//     100%    {left: 15%;}
+// }
 
-.change_text:hover {
-    text-decoration: underline;
-    animation: change_text;
-    animation-duration: 2s;
-}
+// .change_text:hover {
+//     text-decoration: underline;
+//     animation: change_text;
+//     animation-duration: 2s;
+// }
 
-@keyframes change_text {
-    0%      {color: var.$third;}
-    100%    {color: var.$secondary;}
-}
+// @keyframes change_text {
+//     0%      {color: var.$third;}
+//     100%    {color: var.$secondary;}
+// }
 
-.change_header:hover {
-    animation: change_header;
-    animation-duration: 1.5s;
-}
+// .change_header:hover {
+//     animation: change_header;
+//     animation-duration: 1.5s;
+// }
 
-@keyframes change_header {
-    0%      {color: var.$secondary;}
-    100%    {color: var.$third;}
-}
+// @keyframes change_header {
+//     0%      {color: var.$secondary;}
+//     100%    {color: var.$third;}
+// }
 
