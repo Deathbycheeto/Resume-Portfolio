@@ -2,20 +2,12 @@
 @use "./mixins" as mix;
 @use "./keyframes" as key;
 
-// @mixin mainStyle ($color) {
-//     position: relative;
-//     top: 10%;
-//     left: 15%;
-//     font-size: 2em;
-//     max-width: 800px;
-//     color: $color;
-// }
-
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-flow: row, nowrap;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -23,6 +15,9 @@ nav {
     min-width: 90px;
     width: 5%;
     background-color: var.$nav-back;
+    img {
+        position: absolute;
+    }
 }
 
 main {
@@ -49,6 +44,10 @@ main {
         animation-duration: 1s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
+        &:hover {
+            @include mix.colorChange(false);
+            text-decoration: none;
+        }
         span {
             &:hover {
                 @include mix.colorChange(false);
@@ -71,23 +70,19 @@ main {
         li {
             list-style: none;
         }
-
     }
 }
 
 .social-container {
     @include mix.mainStyle(var.$fourth);
     font-size: 1em;
-    border: 1px solid white;
 }
 
 .social-media {
     display: inline-block;
-    padding: 0px;
     margin: 25px;
     width: 115px;
     height: 120px;
-    border: 5px solid white;
 }
 
 .nav-button {
@@ -107,8 +102,13 @@ main {
 }
 aside {
     min-height: 600px;
-    width: 45%;
-    background-color: var.$primary
+    width: 55vh;
+    background-color: var.$primary;
+    img {
+        clip-path: polygon(23% 0, 100% 0%, 100% 100%, 11% 100%);
+        width: 50vh;
+        height: 100vh;
+    }
 }
 
 img {
@@ -122,60 +122,51 @@ img {
     width: 90px;
 }
 
-// #intro_name {
-//     animation: intro_name;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-timing-function: ease-in;
-// }
+@media (max-width: 800px) {
+    body {
+        flex-flow: column, nowrap;
+    }
+    nav {
+        min-height: 100px;
+        min-width: 100vw;
+        height: 5%;
+        
+    }
+    #nav-container { 
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        top: 0;
+        left: 10vw;
+        height: 100px;
+        width: 80vw;   
+    }
+    .nav-button {
+        position: relative;
+        display: inline-block;
+        margin: 0px auto;
+        font-size: .75em;
+        width: 10vw;
+        min-width: 80px;
+        top: 2.5vh;
+    }
+    .fas {
+        display: inline-block;
+        width: 40px;
+    }
+    main {
+        position: absolute;
+        display: block;
+        min-height: 50vh;
+        width: 100vw;
+        top: 11vh;
 
-// @keyframes intro_name {
-//     0%      {top: -200px;}
-//     100%    {top: 10%;}
-// }
-
-// #intro_desc {
-//     animation: intro_desc;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-timing-function: ease-in-out;
-// }
-
-// @keyframes intro_desc {
-//     0%      {top: 120%;}
-//     100%    {top: 10%;}
-// }
-
-// #hr_index {
-//     animation: intro_hr;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-timing-function: ease-in;
-// }
-
-// @keyframes intro_hr {
-//     0%      {left: 120%;}
-//     100%    {left: 15%;}
-// }
-
-// .change_text:hover {
-//     text-decoration: underline;
-//     animation: change_text;
-//     animation-duration: 2s;
-// }
-
-// @keyframes change_text {
-//     0%      {color: var.$third;}
-//     100%    {color: var.$secondary;}
-// }
-
-// .change_header:hover {
-//     animation: change_header;
-//     animation-duration: 1.5s;
-// }
-
-// @keyframes change_header {
-//     0%      {color: var.$secondary;}
-//     100%    {color: var.$third;}
-// }
-
+    }
+    aside {
+        position: absolute;
+        display: block;
+        min-height: 40vh;
+        width: 100vw;
+        top: 61vh;
+    }
+}

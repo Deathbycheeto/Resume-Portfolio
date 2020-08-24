@@ -34,6 +34,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-flow: row, nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -41,6 +43,9 @@ nav {
   min-width: 90px;
   width: 5%;
   background-color: #1f1f1f;
+}
+nav img {
+  position: absolute;
 }
 
 main {
@@ -79,6 +84,12 @@ main h3 {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+}
+main h3:hover {
+  transition: color 1s ease-in;
+  color: springgreen;
+  text-decoration: underline;
+  text-decoration: none;
 }
 main h3 span:hover {
   transition: color 1s ease-in;
@@ -121,16 +132,13 @@ main ul li {
   max-width: 800px;
   color: #CCC;
   font-size: 1em;
-  border: 1px solid white;
 }
 
 .social-media {
   display: inline-block;
-  padding: 0px;
   margin: 25px;
   width: 115px;
   height: 120px;
-  border: 5px solid white;
 }
 
 .nav-button {
@@ -150,8 +158,13 @@ main ul li {
 
 aside {
   min-height: 600px;
-  width: 45%;
+  width: 55vh;
   background-color: #2b2a2a;
+}
+aside img {
+  clip-path: polygon(23% 0, 100% 0%, 100% 100%, 11% 100%);
+  width: 50vh;
+  height: 100vh;
 }
 
 img {
@@ -163,6 +176,59 @@ img {
   position: absolute;
   top: 200px;
   width: 90px;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-flow: column, nowrap;
+  }
+
+  nav {
+    min-height: 100px;
+    min-width: 100vw;
+    height: 5%;
+  }
+
+  #nav-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    top: 0;
+    left: 10vw;
+    height: 100px;
+    width: 80vw;
+  }
+
+  .nav-button {
+    position: relative;
+    display: inline-block;
+    margin: 0px auto;
+    font-size: 0.75em;
+    width: 10vw;
+    min-width: 80px;
+    top: 2.5vh;
+  }
+
+  .fas {
+    display: inline-block;
+    width: 40px;
+  }
+
+  main {
+    position: absolute;
+    display: block;
+    min-height: 50vh;
+    width: 100vw;
+    top: 11vh;
+  }
+
+  aside {
+    position: absolute;
+    display: block;
+    min-height: 40vh;
+    width: 100vw;
+    top: 61vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
