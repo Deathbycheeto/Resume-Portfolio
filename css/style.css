@@ -50,7 +50,8 @@ nav img {
 
 main {
   min-height: 600px;
-  width: 70%;
+  min-width: 400px;
+  width: 50%;
   background-color: #2b2a2a;
 }
 main h1 {
@@ -111,17 +112,17 @@ main hr {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
-main ul {
-  color: springgreen;
-  position: relative;
-  top: 10%;
-  left: 15%;
-  font-size: 2em;
-  max-width: 800px;
-  color: springgreen;
+
+aside {
+  min-height: 600px;
+  width: 50%;
+  background-color: #2b2a2a;
 }
-main ul li {
-  list-style: none;
+aside img {
+  position: relative;
+  left: 10%;
+  width: 75vh;
+  height: 100vh;
 }
 
 .social-container {
@@ -139,6 +140,7 @@ main ul li {
   margin: 25px;
   width: 115px;
   height: 120px;
+  border: 1px solid white;
 }
 
 .nav-button {
@@ -156,17 +158,6 @@ main ul li {
   display: block;
 }
 
-aside {
-  min-height: 600px;
-  width: 55vh;
-  background-color: #2b2a2a;
-}
-aside img {
-  clip-path: polygon(23% 0, 100% 0%, 100% 100%, 11% 100%);
-  width: 50vh;
-  height: 100vh;
-}
-
 img {
   padding: 20px;
 }
@@ -176,6 +167,31 @@ img {
   position: absolute;
   top: 200px;
   width: 90px;
+}
+
+a#twitter {
+  color: white;
+  background-color: blue;
+}
+a#tumblr {
+  color: grey;
+  background-color: white;
+}
+a#facebook {
+  color: blue;
+  background-color: white;
+}
+a#twitch {
+  color: purple;
+  background-color: white;
+}
+a#youtube {
+  color: white;
+  background-color: red;
+}
+a#reddit {
+  color: white;
+  background-color: black;
 }
 
 @media (max-width: 800px) {
@@ -221,6 +237,9 @@ img {
     width: 100vw;
     top: 11vh;
   }
+  main h1 {
+    top: 0%;
+  }
 
   aside {
     position: absolute;
@@ -228,6 +247,10 @@ img {
     min-height: 40vh;
     width: 100vw;
     top: 61vh;
+  }
+
+  .social-media {
+    font-size: 0.75em;
   }
 }
 

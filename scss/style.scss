@@ -22,7 +22,8 @@ nav {
 
 main {
     min-height: 600px;
-    width: 70%;
+    min-width: 400px;
+    width: 50%;
     background-color: var.$primary;
     h1 {
         color: var.$secondary;
@@ -64,12 +65,24 @@ main {
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
     }
-    ul {
-        color: var.$secondary;
-        @include mix.mainStyle(var.$secondary);
-        li {
-            list-style: none;
-        }
+    // ul {
+    //     color: var.$secondary;
+    //     @include mix.mainStyle(var.$secondary);
+    //     li {
+    //         list-style: none;
+    //     }
+    // }
+}
+
+aside {
+    min-height: 600px;
+    width: 50%;
+    background-color: var.$primary;
+    img {
+        position: relative;
+        left: 10%;
+        width: 75vh;
+        height: 100vh;
     }
 }
 
@@ -83,6 +96,7 @@ main {
     margin: 25px;
     width: 115px;
     height: 120px;
+    border: 1px solid white;
 }
 
 .nav-button {
@@ -100,16 +114,7 @@ main {
         display: block;
     }
 }
-aside {
-    min-height: 600px;
-    width: 55vh;
-    background-color: var.$primary;
-    img {
-        clip-path: polygon(23% 0, 100% 0%, 100% 100%, 11% 100%);
-        width: 50vh;
-        height: 100vh;
-    }
-}
+
 
 img {
     padding: 20px;
@@ -120,6 +125,33 @@ img {
     position: absolute;
     top:200px;
     width: 90px;
+}
+
+a {
+    &#twitter {
+        color:white;
+        background-color: blue;
+    }
+    &#tumblr {
+        color:grey;
+        background-color: white;
+    }
+    &#facebook {
+        color:blue;
+        background-color: white;
+    }
+    &#twitch {
+        color:purple;
+        background-color: white;
+    }
+    &#youtube {
+        color: white;
+        background-color: red;
+    }
+    &#reddit {
+        color: white;
+        background-color: black;
+    }
 }
 
 @media (max-width: 800px) {
@@ -160,7 +192,10 @@ img {
         min-height: 50vh;
         width: 100vw;
         top: 11vh;
-
+        h1 {
+            top: 0%;
+            
+        }
     }
     aside {
         position: absolute;
@@ -168,5 +203,8 @@ img {
         min-height: 40vh;
         width: 100vw;
         top: 61vh;
+    }
+    .social-media {
+        font-size: .75em;
     }
 }
