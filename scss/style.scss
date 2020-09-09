@@ -65,13 +65,6 @@ main {
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
     }
-    // ul {
-    //     color: var.$secondary;
-    //     @include mix.mainStyle(var.$secondary);
-    //     li {
-    //         list-style: none;
-    //     }
-    // }
 }
 
 aside {
@@ -80,8 +73,10 @@ aside {
     background-color: var.$primary;
     img {
         position: relative;
-        left: 10%;
+        left: 20%;
         width: 75vh;
+        max-width: 80%;
+        min-width: 50%;
         height: 100vh;
     }
 }
@@ -94,9 +89,10 @@ aside {
 .social-media {
     display: inline-block;
     margin: 25px;
-    width: 115px;
-    height: 120px;
-    border: 1px solid white;
+    width: 120px;
+    height: 125px;
+    padding: 0px;
+    border-radius: 10%;
 }
 
 .nav-button {
@@ -114,7 +110,15 @@ aside {
         display: block;
     }
 }
-
+.portfolio {
+    @include mix.mainStyle(var.$fourth);
+    width: 50%;
+    .example {
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+    }
+}
 
 img {
     padding: 20px;
@@ -127,32 +131,56 @@ img {
     width: 90px;
 }
 
-a {
-    &#twitter {
+
+#twitter {
+    width: 111px;
+    height: 115px;
+    background-color: blue;
+    a{
         color:white;
-        background-color: blue;
-    }
-    &#tumblr {
-        color:grey;
-        background-color: white;
-    }
-    &#facebook {
-        color:blue;
-        background-color: white;
-    }
-    &#twitch {
-        color:purple;
-        background-color: white;
-    }
-    &#youtube {
-        color: white;
-        background-color: red;
-    }
-    &#reddit {
-        color: white;
-        background-color: black;
     }
 }
+#tumblr {
+    width: 113px;
+    height: 115px;
+    background-color: white;
+    a{
+        color:grey;
+    }
+}
+#facebook {
+    width: 113px;
+    height: 115px;
+    background-color: white;
+    a{
+        color: blue;
+    }
+}
+#twitch {
+    width: 120px;
+    height: 125px;
+    background-color: white;
+    a{
+        color:purple;
+    }
+}
+#youtube {
+    width: 113px;
+    height: 115px;
+    background-color: red;
+    a{
+        color:white;
+    }
+}
+#reddit {
+    width: 113px;
+    height: 115px;
+    background-color: black;
+    a{
+        color:white;
+    }
+}
+
 
 @media (max-width: 800px) {
     body {
@@ -161,7 +189,7 @@ a {
     nav {
         min-height: 100px;
         min-width: 100vw;
-        height: 5%;
+        height: 11vh;
         
     }
     #nav-container { 
@@ -177,9 +205,9 @@ a {
         position: relative;
         display: inline-block;
         margin: 0px auto;
-        font-size: .75em;
+        font-size: .4em;
         width: 10vw;
-        min-width: 80px;
+        min-width: 40px;
         top: 2.5vh;
     }
     .fas {
@@ -189,22 +217,61 @@ a {
     main {
         position: absolute;
         display: block;
-        min-height: 50vh;
-        width: 100vw;
+        min-height: 40vh;
+        width: 110vw;
         top: 11vh;
+        left: -10vw;
         h1 {
-            top: 0%;
-            
+            top: 5%;
+            font-size: 2em;
         }
+        h3 {
+            max-width: 90vw;
+            font-size: 1em;
+        }
+    }
+    .portfolio {
+        // position: ;
     }
     aside {
         position: absolute;
         display: block;
-        min-height: 40vh;
+        min-height: 70vh;
         width: 100vw;
-        top: 61vh;
+        top: 51vh;
+        img {
+            left: 5%;
+            top : 70%;
+            width: auto;
+            height: 40vh;
+
+        }
     }
     .social-media {
-        font-size: .75em;
+        font-size: .5em;
+    }
+    #twitter {
+        width: auto;
+        height: auto;
+    }
+    #tumblr {
+        width: auto;
+        height: auto;
+    }
+    #facebook {
+        width: auto;
+        height: auto;
+    }
+    #twitch {
+        width: auto;
+        height: auto;
+    }
+    #youtube {
+        width: auto;
+        height: auto;
+    }
+    #reddit {
+        width: auto;
+        height: auto;
     }
 }
